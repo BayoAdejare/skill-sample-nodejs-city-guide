@@ -6,7 +6,7 @@ var states = {
     TOPFIVE: '_TOPFIVE',
 };
 
-var location = "Seattle";
+var location = "Las Vegas";
 
 var numberOfResults = 3;
 
@@ -16,7 +16,7 @@ var welcomeMessage = location + " Guide. You can ask me for an attraction, the l
 
 var welcomeRepromt = "You can ask me for an attraction, the local news, or  say help. What will it be?";
 
-var locationOverview = "Seattle is a West Coast seaport city and the  seat of King County. With an estimated 684,451 residents as of 2015, Seattle is the largest city in both the state of Washington and the Pacific Northwest region of North America.";
+var locationOverview = "Las Vegas is a West Coast seaport city and the  seat of King County. With an estimated 684,451 residents as of 2015, Las Vegas is the largest city in both the state of Washington and the Pacific Northwest region of North America.";
 
 var HelpMessage = "Here are some things you  can say: Give me an attraction. Tell me about " + location + ". Tell me the top five things to do. Tell me the local news.  What would you like to do?";
 
@@ -49,7 +49,7 @@ var attractions = [
     { name: "Mirage and the Secret Garden", content: "The Mirage is a 3,044 room Polynesian-themed resort and casino resort located on the Las Vegas Strip in Paradise, Nevada, United States. The original marquee sign in front of the Mirage is the largest free standing marquee in the world.", location: "3400 S Las Vegas Blvd, Las Vegas, NV 89109", contact: "702 791 7111" },
     { name: "Red Rock National Conservation Area", content:  "Red Rock Canyon National Conservation Area is an area managed by the Bureau of Land Management and protected as a National Conservation Area. It is located about 15 miles (24 km) west of Las Vegas, and is easily seen from the Las Vegas Strip.", location: "1000 Scenic Loop Dr, Las Vegas, NV 89161", contact: "702 515-5350" },
     { name: "Caesar's Palace", content: "Caesar's Palace is one of the most prestigious casino hotels in the world and one of Las Vegas's largest and best known landmarks. It contains many statues, and columns including a 20-foot (6.1 m) statue of Julius Caesar near the entrance.", location: "3570 S Las Vegas Blvd, Las Vegas, NV 89109", contact: "866 227-5938" },
-    { name: "Freemont Street Experience", content: "The Freemont Street Eperience is a pedestrian mall and attraction in Downtown Las Vegas, Nevada. The FSE occupies the westernmost five blocks of Fremont Street, including the area known for years as "Glitter Gulch," and portions of some other adjacent streets.", location: "Fremont St, Las Vegas, NV 89101", contact: "702 678 5600" }
+    { name: "Freemont Street Experience", content: "The Freemont Street Eperience is a pedestrian mall and attraction in Downtown Las Vegas, Nevada. The FSE occupies the westernmost five blocks of Fremont Street, including the area known for years as Glitter Gulch, and portions of some other adjacent streets.", location: "Fremont St, Las Vegas, NV 89101", contact: "702 678 5600" }
 ];
 
 var topFive = [
@@ -57,7 +57,7 @@ var topFive = [
     { number: "2", caption: "Visit the Mirage and see the Secret Garden and Dolphin Habitat.", more: "The Mirage is a 3,044 room Polynesian-themed resort and casino resort located on the Las Vegas Strip in Paradise, Nevada, United States. The original marquee sign in front of the Mirage is the largest free standing marquee in the world.", location: "3400 S Las Vegas Blvd, Las Vegas, NV 89109", contact: "702 791 7111" },
     { number: "3", caption: "Visit Red Rock National Conservation Area and see the Natural Wonder.", more: "Red Rock Canyon National Conservation Area is an area managed by the Bureau of Land Management and protected as a National Conservation Area. It is located about 15 miles (24 km) west of Las Vegas, and is easily seen from the Las Vegas Strip.", location: "1000 Scenic Loop Dr, Las Vegas, NV 89161", contact: "702 515-5350" },
     { number: "4", caption: "Visit Caesar's Palace and experience life in Roman times .", more: "Caesar's Palace is one of the most prestigious casino hotels in the world and one of Las Vegas's largest and best known landmarks. It contains many statues, and columns including a 20-foot (6.1 m) statue of Julius Caesar near the entrance.", location: "3570 S Las Vegas Blvd, Las Vegas, NV 89109", contact: "866 227-5938" },
-    { number: "5", caption: "Visit the Freemont Street Experience and see a free concert.", more: "The Freemont Street Eperience is a pedestrian mall and attraction in Downtown Las Vegas, Nevada. The FSE occupies the westernmost five blocks of Fremont Street, including the area known for years as "Glitter Gulch," and portions of some other adjacent streets.", location: "Fremont St, Las Vegas, NV 89101", contact: "702 678 5600" }
+    { number: "5", caption: "Visit the Freemont Street Experience and see a free concert.", more: "The Freemont Street Eperience is a pedestrian mall and attraction in Downtown Las Vegas, Nevada. The FSE occupies the westernmost five blocks of Fremont Street, including the area known for years as Glitter Gulch, and portions of some other adjacent streets.", location: "Fremont St, Las Vegas, NV 89101", contact: "702 678 5600" }
 ];
 
 var topFiveIntro = "Here are the top five things to  do in " + location + ".";
@@ -273,7 +273,7 @@ function httpGet(query, callback) {
   console.log("/n QUERY: "+query);
 
     var options = {
-      //http://api.nytimes.com/svc/search/v2/articlesearch.json?q=seattle&sort=newest&api-key=
+      //http://api.nytimes.com/svc/search/v2/articlesearch.json?q=Las Vegas&sort=newest&api-key=
         host: 'api.nytimes.com',
         path: '/svc/search/v2/articlesearch.json?q=' + encodeURI(query) + '&sort=newest&api-key=' + APIKey,
         method: 'GET'
